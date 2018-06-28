@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"  >
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>PC</title>
+    <style>
+      html,body,#app{
+        width: 100%;
+        height: 100%;
+        font-family: '微软雅黑';
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 10]>
+      <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js "></script>
+      <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js "></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script>
+  var userAgent = navigator.userAgent
+  var reIE = new RegExp('MSIE (\\d+\\.\\d+)')
+  reIE.test(userAgent)
+  var fIEVersion = parseFloat(RegExp['$1'])
+  if (fIEVersion == 9) {
+    document.getElementsById('app').style="overflow-y:scroll"
+  } else {
+    document.getElementsByTagName('html')[0].style="overflow:hidden"
+    document.getElementsByTagName('body')[0].style="overflow:hidden"
+    document.getElementById('app').style="overflow:hidden"
+  }
+</script>
